@@ -10,6 +10,7 @@
  * - npm run build
  *
  */
+import {extractBase, setSsrLocaleGetter} from 'compiled-i18n/qwik'
 import {
   renderToStream,
   type RenderToStreamOptions,
@@ -17,13 +18,16 @@ import {
 import { manifest } from "@qwik-client-manifest";
 import Root from "./root";
 
+setSsrLocaleGetter()
+
 export default function (opts: RenderToStreamOptions) {
   return renderToStream(<Root />, {
     manifest,
     ...opts,
+    base: extractBase,
     // Use container attributes to set attributes on the html tag.
     containerAttributes: {
-      lang: "en-us",
+      lang: opts.serverData!.locale,
       ...opts.containerAttributes,
     },
     serverData: {

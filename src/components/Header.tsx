@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import { NavLink } from '~/components/NavLink';
 import { _ } from 'compiled-i18n';
 import { ThemeSwitch } from './ThemeSwitch';
-import { SelectorLanguage } from './SelectorLanguage';
+import { LocaleSelector } from './LocaleSelector';
 
 export const Header = component$(() => {
     return (
@@ -18,7 +18,7 @@ export const Header = component$(() => {
                 <NavLink class="py-4 px-3 hover:bg-slate-200 transition-colors duration-300 ease-in-out" href="/photos/" activeClass="font-bold border-b-2 border-b-black dark:border-b-white">
                     <div>{_`Photos`}</div>
                 </NavLink>
-                <SelectorLanguage />
+                <LocaleSelector />
                 <ThemeSwitch />
             </nav>
         </header>

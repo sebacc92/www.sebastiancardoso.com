@@ -59,7 +59,7 @@ export default component$(() => {
                 <li>🔸<strong>2016</strong>: {_`✈️ Viajo en avión por primera vez.`}</li>
                 <li>🔸<strong>2017</strong>: {_`🐈🐈‍⬛ Adopto a ${<a href="https://www.instagram.com/p/BtLw5MOHutO/" target="_blank" class="text-blue-500 hover:text-blue-700">Sol & Pante</a>}.`}</li>
                 <li>🔸<strong>2018</strong>: {_`Me registro en ${<a href="https://platzi.com/c/seba/" target="_blank" class="text-blue-500 hover:text-blue-700">Platzi</a>} y empiezo a estudiar programación de forma autodidacta.`}</li>
-                <li>🔸<strong>2019</strong>: {_`Comienzo a trabajar presencial en ${<a href="https://arzion.com/" target="_blank" class="text-blue-500 hover:text-blue-700">Arzion</a>} como programador React para un sistema de <a href="https://www.anantara.com/es" target="_blank" class="text-blue-500 hover:text-blue-700">booking de hoteles</a>.`}</li>
+                <li>🔸<strong>2019</strong>: {_`Comienzo a trabajar presencial en ${<a href="https://arzion.com/" target="_blank" class="text-blue-500 hover:text-blue-700">Arzion</a>} como programador React para un sistema de ${<a href="https://www.anantara.com/es" target="_blank" class="text-blue-500 hover:text-blue-700">{_`booking de hoteles`}</a>}.`}</li>
                 <li>
                     🔸<strong>2020</strong>
                     :

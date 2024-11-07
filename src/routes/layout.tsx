@@ -1,5 +1,6 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { $, component$, Slot, useOnDocument } from "@builder.io/qwik";
 import { routeLoader$, type RequestHandler } from "@builder.io/qwik-city";
+import { guessLocale } from 'compiled-i18n'
 import { Header } from "~/components/Header";
 import { Footer } from "~/components/Footer";
 
@@ -14,6 +15,12 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
   });
 };
 
+export const onRequest: RequestHandler = async ({query, headers, locale}) => {
+	// Allow overriding locale with query param `locale`
+	const maybeLocale = query.get('locale') || headers.get('accept-language')
+	locale(guessLocale(maybeLocale))
+}
+
 export const useServerTimeLoader = routeLoader$(() => {
   return {
     date: new Date().toISOString(),
@@ -21,6 +28,28 @@ export const useServerTimeLoader = routeLoader$(() => {
 });
 
 export default component$(() => {
+  useOnDocument(
+    'load',
+    $(() => {
+      // remove all query params except allowed
+      const allowed = new Set(['page'])
+      if (location.search) {
+        const params = new URLSearchParams(location.search)
+        for (const [key] of params) {
+          if (!allowed.has(key)) {
+            params.delete(key)
+          }
+        }
+        let search = params.toString()
+        if (search) search = '?' + search
+        history.replaceState(
+          history.state,
+          '',
+          location.href.slice(0, location.href.indexOf('?')) + search
+        )
+      }
+    })
+  )
   return (
     <div class="bg-gray-50 dark:bg-zinc-900 dark:text-white">
       <div class="container">
