@@ -1,4 +1,5 @@
-import { component$, createContextId, type Signal, useContextProvider, useSignal, useStylesScoped$ } from "@builder.io/qwik";
+/* eslint-disable qwik/no-use-visible-task */
+import { component$, createContextId, type Signal, useContextProvider, useSignal, useStylesScoped$, useVisibleTask$ } from "@builder.io/qwik";
 import { LuMoon, LuSun } from "@qwikest/icons/lucide";
 import styles from './ThemeSwitch.css?inline';
 
@@ -10,6 +11,10 @@ export const ThemeSwitch = component$(() => {
     useStylesScoped$(styles);
     const theme = useSignal('light');
     useContextProvider(ThemeContext, theme);
+
+    useVisibleTask$(() => {
+        theme.value = localStorage.getItem('theme') || 'light';
+    });
 
     return (
         <div class="switch">
@@ -28,8 +33,8 @@ export const ThemeSwitch = component$(() => {
                         }
                     }}
                 />
-                <span>
-                    <span class="theme-icon">{theme.value === "light" ? <LuSun /> : <LuMoon />}</span>
+                <span class="py-4 px-2">
+                    <span class="theme-icon bg-blue-400a">{theme.value === "light" ? <LuSun /> : <LuMoon />}</span>
                 </span>
             </label>
         </div>

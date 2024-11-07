@@ -28,6 +28,27 @@ export default component$(() => {
           />
         )}
         <RouterHead />
+        <script
+          dangerouslySetInnerHTML={`
+            (function() {
+              function setTheme(theme) {
+                document.documentElement.className = theme;
+                localStorage.setItem('theme', theme);
+              }
+              var theme = localStorage.getItem('theme');
+              if (theme) {
+                setTheme(theme);
+              } else {
+                setTheme('light');
+              }
+            })();
+            window.addEventListener('load', function() {
+              var themeSwitch = document.getElementById('hide-checkbox');
+              themeSwitch.checked = localStorage.getItem('theme') === 'light'? true: false;
+            }
+            );
+        `}
+        ></script>
       </head>
       <body lang="en">
         <RouterOutlet />

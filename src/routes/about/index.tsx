@@ -72,10 +72,10 @@ export default component$(() => {
                 <li>🔸<strong>2022</strong>: 👶 Nace Ciro, nuestro hijo.</li>
                 <li>🔸<strong>2023</strong>: Nos mudamos a <a href="https://www.google.com/maps/place/Miramar,+Provincia+de+Buenos+Aires/@-38.2477663,-57.9116171,12z" target="_blank" class="text-blue-500 hover:text-blue-700">Miramar</a>.</li>
                 <li>🔸
-                    <span class="inline-block text-gray-900 text-opacity-50 animate-pulse duration-2000"><strong>Escribiendo mi presente</strong></span>
-                    <span class="inline-block text-2xl text-gray-900 text-opacity-50 animate-pulse duration-2000"><strong>. </strong></span>
-                    <span class="inline-block text-2xl text-gray-900 text-opacity-50 animate-pulse duration-2000"><strong>. </strong></span>
-                    <span class="inline-block text-2xl text-gray-900 text-opacity-50 animate-pulse duration-2000"><strong>. </strong></span>
+                    <span class="inline-block text-gray-900 text-opacity-50 animate-pulse duration-2000 dark:text-white"><strong>Escribiendo mi presente</strong></span>
+                    <span class="inline-block text-2xl text-gray-900 text-opacity-50 animate-pulse duration-2000 dark:text-white"><strong>. </strong></span>
+                    <span class="inline-block text-2xl text-gray-900 text-opacity-50 animate-pulse duration-2000 dark:text-white"><strong>. </strong></span>
+                    <span class="inline-block text-2xl text-gray-900 text-opacity-50 animate-pulse duration-2000 dark:text-white"><strong>. </strong></span>
                 </li>
             </ul>
             <div class="my-8"></div>
