@@ -12,11 +12,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: _`Hola soy Sebastian Cardoso`,
+  title: _`Hi I am Sebastian Cardoso`,
   meta: [
     {
       name: "description",
-      content: _`Soy un desarrollador web full-stack con experiencia en tecnologías modernas com Qwik.`,
+      content: _`I am a full-stack web developer with experience in modern technologies such as Qwik.`,
     },
   ],
 };

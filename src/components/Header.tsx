@@ -18,8 +18,8 @@ export const Header = component$(() => {
                 <NavLink class="py-4 px-3 hover:bg-slate-200 transition-colors duration-300 ease-in-out" href="/photos/" activeClass="font-bold border-b-2 border-b-black dark:border-b-white">
                     <div>{_`Photos`}</div>
                 </NavLink>
-                <ThemeSwitch />
                 <SelectorLanguage />
+                <ThemeSwitch />
             </nav>
         </header>
     );
