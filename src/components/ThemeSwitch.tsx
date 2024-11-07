@@ -1,6 +1,5 @@
 import { component$, createContextId, type Signal, useContextProvider, useSignal, useStylesScoped$ } from "@builder.io/qwik";
 import { LuMoon, LuSun } from "@qwikest/icons/lucide";
-import { _ } from "compiled-i18n";
 import styles from './ThemeSwitch.css?inline';
 
 export const ThemeContext = createContextId<Signal<string>>(

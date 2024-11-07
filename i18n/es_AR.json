@@ -1,5 +1,21 @@
 {
   "locale": "es_AR",
   "name": "es (AR)",
-  "translations": {}
+  "translations": {
+    "Hola soy Sebastian Cardoso": "",
+    "Soy un desarrollador web full-stack con experiencia en tecnologías modernas com Qwik.": "",
+    "Site Footer": "",
+    "Site Header": "",
+    "Home": "",
+    "About": "",
+    "Blog": "",
+    "Photos": "",
+    "Profile photo": "",
+    "Hi!": "",
+    "I'm Sebastian Cardoso": "",
+    "I develop software for build web apps focused on performance and user experience.": "",
+    "I'm a Full-stack JavaScript Developer from 🇺🇾 Uruguay living in 🇦🇷 Argentina.": "",
+    "+5 years of experience": "",
+    "Time to celebrate": ""
+  }
 }
