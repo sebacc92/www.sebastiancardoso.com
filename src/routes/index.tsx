@@ -1,25 +1,22 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { _ } from "compiled-i18n";
+import { Hero } from "~/components/Hero";
 
 export default component$(() => {
   return (
-    <>
-      <h1>Hi 👋</h1>
-      <div>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </div>
-    </>
+    <main class="flex flex-col justify-center">
+      <Hero />
+    </main>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: _`Hola soy Sebastian Cardoso`,
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: _`Soy un desarrollador web full-stack con experiencia en tecnologías modernas com Qwik.`,
     },
   ],
 };

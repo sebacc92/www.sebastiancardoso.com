@@ -1,5 +1,7 @@
 import { component$, Slot } from "@builder.io/qwik";
-import type { RequestHandler } from "@builder.io/qwik-city";
+import { routeLoader$, type RequestHandler } from "@builder.io/qwik-city";
+import { Header } from "~/components/Header";
+import { Footer } from "~/components/Footer";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -12,6 +14,20 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
   });
 };
 
+export const useServerTimeLoader = routeLoader$(() => {
+  return {
+    date: new Date().toISOString(),
+  };
+});
+
 export default component$(() => {
-  return <Slot />;
+  return (
+    <div class="bg-gray-50 dark:bg-zinc-900 dark:text-white">
+      <div class="container">
+        <Header />
+        <Slot />
+        <Footer />
+      </div>
+    </div>
+  )
 });
