@@ -19,7 +19,7 @@ export const LocaleSelector = component$(() => {
             <Dropdown.Trigger class="py-4 px-2">
                 <LuLanguages class="h-5 w-5" />
             </Dropdown.Trigger>
-            <Dropdown.Popover class="p-2 round-edsm" gutter={8}>
+            <Dropdown.Popover class="p-2 rounded-sm" gutter={8}>
                 <Dropdown.Group class="mb-2">
                     <Dropdown.GroupLabel class="dropdown-group-label">
                         {_`Languages`}

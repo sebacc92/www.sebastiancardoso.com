@@ -38,32 +38,6 @@
     margin-left: 4px;
 }
 
-.play-button {
-    display: inline-block;
-    position: relative;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: black;
-    font-size: 16px;
-    transform: translate(0%, 25%);
-    cursor: pointer;
-}
-
-.play-button::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-35%, -50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 6px 0 6px 10px;
-    border-color: transparent transparent transparent white;
-}
-
 ul>li {
     margin-top: .3em;
 }

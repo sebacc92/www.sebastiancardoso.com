@@ -1,17 +1,17 @@
 import { component$ } from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
+import { Badge, Button } from '~/components/ui';
 import { _ } from 'compiled-i18n';
 import ImgYo from '~/media/yo.jpg?jsx'; 
-import { Badge, Button } from '~/components/ui';
+import { QwikLogo } from './icons/qwik';
 
 export const Hero = component$(() => {
     return (
         <div>
-            <div class="max-w-6xl mx-auto grid md:grid-cols-10 gap-4 items-center">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-10 gap-4 items-center">
                 <div class="md:col-span-4 relative aspect-square w-full max-w-sm mx-auto">
                     <ImgYo
                         alt={_`Profile photo`}
-                        class="rounded-lg object-cover"
+                        class="rounded-lg object-cover shadow-2xl"
                     />
                 </div>
                 <div class="md:col-span-6 space-y-6">
@@ -30,51 +30,17 @@ export const Hero = component$(() => {
                             <Badge look="secondary">
                                 {_`+5 years of experience`}
                             </Badge>
-                            <span>writing software with <Badge class="ml-1 bg-yellow-300">Javascript</Badge></span>
+                            <span>{_`writing software with`} <Badge class="ml-1 bg-yellow-300 hover:bg-yellow-400">Javascript</Badge></span>
                         </div>
                         <div class="space-x-2">
-                            Currently writing software with:
-                            <Badge class="ml-1 bg-violet-400">
+                            {_`Currently writing software with:`}
+                            <Badge class="ml-1 bg-violet-400 hover:bg-violet-500">
                                 Qwik
                             </Badge>
-                            <Badge class="ml-1 bg-green-400">
+                            <Badge class="ml-1 bg-green-400 hover:bg-green-500">
                                 FastAPI
                             </Badge>
                         </div>
-                    </div>
-                    <div class="flex gap-4 text-zinc-400">
-                        <Link href="#" class="hover:text-white transition-colors">
-                            {/* <Twitter class="w-6 h-6" /> */}
-                            <span class="sr-only">Twitter</span>
-                        </Link>
-                        <Link href="#" class="hover:text-white transition-colors">
-                            {/* <Twitch class="w-6 h-6" /> */}
-                            <span class="sr-only">Twitch</span>
-                        </Link>
-                        <Link href="#" class="hover:text-white transition-colors">
-                            {/* <Youtube class="w-6 h-6" /> */}
-                            <span class="sr-only">YouTube</span>
-                        </Link>
-                        <Link href="#" class="hover:text-white transition-colors">
-                            {/* <Instagram class="w-6 h-6" /> */}
-                            <span class="sr-only">Instagram</span>
-                        </Link>
-                        <Link href="#" class="hover:text-white transition-colors">
-                            {/* <Linkedin class="w-6 h-6" /> */}
-                            <span class="sr-only">LinkedIn</span>
-                        </Link>
-                        <Link href="#" class="hover:text-white transition-colors">
-                            {/* <Facebook class="w-6 h-6" /> */}
-                            <span class="sr-only">Facebook</span>
-                        </Link>
-                        <Link href="#" class="hover:text-white transition-colors">
-                            {/* <Github class="w-6 h-6" /> */}
-                            <span class="sr-only">GitHub</span>
-                        </Link>
-                        <Link href="#" class="hover:text-white transition-colors">
-                            {/* <Mail class="w-6 h-6" /> */}
-                            <span class="sr-only">Email</span>
-                        </Link>
                     </div>
                     <Button
                         class="bg-green-400 hover:bg-green-500 text-black font-semibold px-8 text-lg rounded-md w-full md:w-auto"

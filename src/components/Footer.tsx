@@ -17,12 +17,33 @@ export const Footer = component$(() => {
     return (
         <footer aria-label={_`Site Footer`} class="flex justify-between items-center py-4 border-t-2 border-b-slate-300">
             <h6>Sebastian Cardoso © {year}</h6>
+            <a href="https://github.com/sebacc92/www.sebastiancardoso.com" target="_blank" class="text-xs">Source</a>
             <ul class="flex justify-center items-center gap-4 md:gap-8 lg:gap-10">
-                <li><Link href="https://instagram.com/sebacc92/"><LuInstagram class="h-5 w-5" /></Link></li>
-                <li><Link href="https://twitter.com/sebacc92"><LuTwitter class="h-5 w-5" /></Link></li>
-                <li><Link href="https://www.youtube.com/watch?v=0sqIXDJ546w&t"><LuYoutube class="h-5 w-5" /></Link></li>
-                <li><Link href="https://github.com/sebacc92"><LuGithub class="h-5 w-5" /></Link></li>
-                <li><Link href="https://www.linkedin.com/in/sebastiancardoso92/"><LuLinkedin class="h-5 w-5" /></Link></li>
+                <li>
+                    <Link href="https://instagram.com/sebacc92/" aria-label="Instagram">
+                        <LuInstagram class="h-5 w-5 transition-transform duration-200 ease-in-out transform hover:scale-110" />
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://twitter.com/sebacc92" aria-label="Twitter">
+                        <LuTwitter class="h-5 w-5 transition-transform duration-200 ease-in-out transform hover:scale-110" />
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://www.youtube.com/watch?v=0sqIXDJ546w&t" aria-label="YouTube">
+                        <LuYoutube class="h-5 w-5 transition-transform duration-200 ease-in-out transform hover:scale-110" />
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://github.com/sebacc92" aria-label="GitHub">
+                        <LuGithub class="h-5 w-5 transition-transform duration-200 ease-in-out transform hover:scale-110" />
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://www.linkedin.com/in/sebastiancardoso92/" aria-label="LinkedIn">
+                        <LuLinkedin class="h-5 w-5 transition-transform duration-200 ease-in-out transform hover:scale-110" />
+                    </Link>
+                </li>
             </ul>
         </footer>
     );

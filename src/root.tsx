@@ -50,7 +50,7 @@ export default component$(() => {
         `}
         ></script>
       </head>
-      <body lang="en">
+      <body>
         <RouterOutlet />
         {!isDev && <ServiceWorkerRegister />}
       </body>

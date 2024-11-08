@@ -46,10 +46,15 @@
     "Profile photo": "Profile photo",
     "Hi!": "Hi!",
     "I'm Sebastian Cardoso": "I'm Sebastian Cardoso",
-    "I develop software for build web apps focused on performance and user experience.": "I develop software to build web apps focused on performance and user experience.",
-    "I'm a Full-stack JavaScript Developer from 🇺🇾 Uruguay living in 🇦🇷 Argentina.": "I'm a Full-stack JavaScript Developer from 🇺🇾 Uruguay living in 🇦🇷 Argentina.",
+    "I develop software for build web apps focused on performance and user experience.": "I develop software to build Web Apps focused on performance and user experience.",
+    "I'm a Full-stack Developer from 🇺🇾 Uruguay living in 🇦🇷 Argentina.": "I'm a Full-stack JavaScript Developer from 🇺🇾 Uruguay living in 🇦🇷 Argentina.",
     "+5 years of experience": "+5 years of experience",
     "Time to celebrate": "Time to celebrate",
-    "Languages": "Languages"
+    "Languages": "Languages",
+    "Projects": "Projects",
+    "writing software with": "writing software with: ",
+    "Currently writing software with:": "Currently writing software with: ",
+    "Sobre mí": "About me",
+    "Fuera del desarrollo web, disfruto de actividades al aire libre como andar en bicicleta, nadar y levantar peso en el gimnasio. Además, me encanta leer libros de autores inspiradores como Napoleon Hill, Steven Covey, Kiyosaki, Harv Eker y Eckhart Tolle, que me motivan a crecer tanto personal como profesionalmente.": "Outside of web development, I enjoy outdoor activities such as biking, swimming and lifting weights at the gym. In addition, I love reading books by inspirational authors such as Napoleon Hill, Steven Covey, Kiyosaki, Harv Eker and Eckhart Tolle, which motivate me to grow both personally and professionally."
   }
 }

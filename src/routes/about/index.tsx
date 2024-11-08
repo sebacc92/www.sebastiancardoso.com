@@ -1,40 +1,84 @@
+/* eslint-disable qwik/no-use-visible-task */
 
 import ImgYo2 from '~/media/yo2.jpg?jsx';
-import { component$, useStylesScoped$ } from '@builder.io/qwik';
+import { component$, getLocale, useSignal, useStylesScoped$, useVisibleTask$ } from '@builder.io/qwik';
 import styles from './about.css?inline';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { _ } from 'compiled-i18n';
+import { LuPlayCircle, LuStopCircle } from '@qwikest/icons/lucide';
+
+const AUDIO_SRC_ES = '/audios/Presentation-ES.mp3';
+const AUDIO_SRC_EN = '/audios/Presentation-EN.mp3';
 
 export default component$(() => {
     useStylesScoped$(styles);
+    const currentLocale = getLocale()
+    console.log('currentLocale', currentLocale)
+
+    const audioElementSignal = useSignal<HTMLAudioElement | undefined>();
+    const audioPlayButtonSignal = useSignal<HTMLButtonElement | undefined>();
+    const audioIsPlayingSignal = useSignal(false);
+    useVisibleTask$(({ track }) => {
+        track(() => audioElementSignal.value);
+
+        const play = () =>
+            audioIsPlayingSignal.value
+                ? audioElementSignal.value?.pause()
+                : audioElementSignal.value?.play();
+
+        audioPlayButtonSignal.value?.removeEventListener('click', play);
+        audioPlayButtonSignal.value?.addEventListener('click', play);
+
+        return () =>
+            audioPlayButtonSignal.value?.removeEventListener('click', play);
+    });
     return (
         <div class="mt-4">
             {/* <h2>Aprende. Crea. Comparte!</h2> */}
-            <h1 class="my-4 text-3xl font-bold">Sobre mí</h1>
+            <h1 class="my-4 text-3xl font-bold">{_`Sobre mí`}</h1>
             <div class="about-me-content">
                 <figure class="rounded-md">
                     <ImgYo2 alt="Foto de Seba" class="photo border-8 border-grey-500/50" />
                 </figure>
                 <div class="">
                     <div class="about-me-text mr-4">
-                        <p>
+                        <div>
                             <span>{_`Hola! Mi nombre es`} <strong>Sebastián Cardoso</strong>.</span>
                             <button
-                                class="button-audio-play"
+                                class="button-audio-play h-4 w-4 text-2xl"
+                                ref={audioPlayButtonSignal}
                                 role="button"
                                 aria-label={_`How to pronounce my name`}
                             >
-                                <i class="play-button"></i>
+                                {audioIsPlayingSignal.value ? <LuStopCircle class="h-6 w-6" /> : <LuPlayCircle class="h-6 w-6" />}
                             </button>
-                        </p>
-                        {/* <audio ref={audioRef} src="/audio/presentation.mp3"></audio> */}
-                        <br/>
+                            {currentLocale === 'en_US'
+                                ? (
+                                    <audio
+                                        ref={audioElementSignal}
+                                        src={AUDIO_SRC_EN}
+                                        onPlay$={() => (audioIsPlayingSignal.value = true)}
+                                        onPause$={() => (audioIsPlayingSignal.value = false)}
+                                        onEnded$={() => (audioIsPlayingSignal.value = false)}
+                                    />)
+                                : (
+                                    <audio
+                                        ref={audioElementSignal}
+                                        src={AUDIO_SRC_ES}
+                                        onPlay$={() => (audioIsPlayingSignal.value = true)}
+                                        onPause$={() => (audioIsPlayingSignal.value = false)}
+                                        onEnded$={() => (audioIsPlayingSignal.value = false)}
+                                    />
+                                )
+                            }
+                        </div>
+                        <br />
                         <p>{_`Soy un apasionado desarrollador Full-stack JavaScript con más de 5 años de experiencia en la creación de aplicaciones web eficientes y sistemas robustos. Mi viaje en el mundo de la tecnología comenzó desde joven, siempre curioso por las computadoras y cómo funcionan.`}</p>
-                        <br/>
+                        <br />
                         <p>{_`Aunque comencé mi formación universitaria en sistemas, gran parte de mi conocimiento lo he adquirido de forma autodidacta, lo que me ha permitido adaptarme rápidamente a nuevas tecnologías y frameworks como Qwik, React y Vue.`}</p>
-                        <br/>
-                        <p>{`_Fuera del desarrollo web, disfruto de actividades al aire libre como andar en bicicleta, nadar y levantar peso en el gimnasio. Además, me encanta leer libros de autores inspiradores como Napoleon Hill, Steven Covey, Kiyosaki, Harv Eker y Eckhart Tolle, que me motivan a crecer tanto personal como profesionalmente.`}</p>
-                        <br/>
+                        <br />
+                        <p>{_`Fuera del desarrollo web, disfruto de actividades al aire libre como andar en bicicleta, nadar y levantar peso en el gimnasio. Además, me encanta leer libros de autores inspiradores como Napoleon Hill, Steven Covey, Kiyosaki, Harv Eker y Eckhart Tolle, que me motivan a crecer tanto personal como profesionalmente.`}</p>
+                        <br />
                         <p>{_`Creo firmemente que vivimos en una era única donde la conectividad global nos permite unirnos y colaborar como nunca antes. Mi misión es aprovechar esta conectividad para crear sistemas que fomenten la unidad y el progreso, incrementando la vibración positiva de nuestro planeta`}.</p>
                     </div>
                 </div>
