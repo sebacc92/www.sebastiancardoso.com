@@ -16,7 +16,7 @@ export const LocaleSelector = component$(() => {
 
     return (
         <Dropdown.Root class="">
-            <Dropdown.Trigger class="py-4 px-2">
+            <Dropdown.Trigger class="py-4 px-2" role="button" aria-label={_`Locale Selector`}>
                 <LuLanguages class="h-5 w-5" />
             </Dropdown.Trigger>
             <Dropdown.Popover class="p-2 rounded-sm" gutter={8}>

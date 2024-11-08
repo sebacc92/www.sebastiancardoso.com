@@ -44,7 +44,7 @@ export default component$(() => {
             })();
             window.addEventListener('load', function() {
               var themeSwitch = document.getElementById('hide-checkbox');
-              themeSwitch.checked = localStorage.getItem('theme') === 'light'? true: false;
+              themeSwitch?.checked = localStorage.getItem('theme') === 'light'? true: false;
             }
             );
         `}

@@ -1,17 +1,20 @@
 import { component$ } from '@builder.io/qwik';
 import { Badge, Button } from '~/components/ui';
 import { _ } from 'compiled-i18n';
-import ImgYo from '~/media/yo.jpg?jsx'; 
-import { QwikLogo } from './icons/qwik';
+import { Image } from '@unpic/qwik';
 
 export const Hero = component$(() => {
     return (
         <div>
             <div class="max-w-7xl mx-auto grid md:grid-cols-10 gap-4 items-center">
                 <div class="md:col-span-4 relative aspect-square w-full max-w-sm mx-auto">
-                    <ImgYo
-                        alt={_`Profile photo`}
+                    <Image
+                        src="/yo.webp"
+                        layout="constrained"
+                        width={400}
+                        height={400}
                         class="rounded-lg object-cover shadow-2xl"
+                        alt="A lovely bath"
                     />
                 </div>
                 <div class="md:col-span-6 space-y-6">

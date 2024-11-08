@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b0f18f0a-af82-42a4-8217-d38c18c976cb/deploy-status)](https://app.netlify.com/sites/sebastiancardosopage/deploys)
-
 
 # Qwik City App ⚡️
 

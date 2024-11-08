@@ -16,7 +16,7 @@ export const Footer = component$(() => {
     }
     return (
         <footer aria-label={_`Site Footer`} class="flex justify-between items-center py-4 border-t-2 border-b-slate-300">
-            <h6>Sebastian Cardoso © {year}</h6>
+            <span>Sebastian Cardoso © {year}</span>
             <a href="https://github.com/sebacc92/www.sebastiancardoso.com" target="_blank" class="text-xs">Source</a>
             <ul class="flex justify-center items-center gap-4 md:gap-8 lg:gap-10">
                 <li>
