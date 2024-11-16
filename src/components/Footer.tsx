@@ -15,33 +15,42 @@ export const Footer = component$(() => {
         }
     }
     return (
-        <footer aria-label={_`Site Footer`} class="flex justify-between items-center py-4 border-t-2 border-b-slate-300">
-            <span>Sebastian Cardoso © {year}</span>
-            <a href="https://github.com/sebacc92/www.sebastiancardoso.com" target="_blank" class="text-xs">Source</a>
-            <ul class="flex justify-center items-center gap-4 md:gap-8 lg:gap-10">
+        <footer aria-label={_`Site Footer`} class="flex flex-col sm:flex-row justify-between items-center py-4 border-t-2 border-b-slate-300">
+            {/* Bloque 1: Texto de Copyright */}
+            <span class="mb-2 sm:mb-0">
+                © {year} Sebastian Cardoso
+            </span>
+            
+            {/* Bloque 2: Enlace "Source" */}
+            <a href="https://github.com/sebacc92/www.sebastiancardoso.com" target="_blank" class="text-xs mb-2 sm:mb-0 hover:underline">
+                Source
+            </a>
+            
+            {/* Bloque 3: Redes Sociales */}
+            <ul class="flex justify-center items-center gap-8 lg:gap-10">
                 <li>
                     <Link href="https://instagram.com/sebacc92/" aria-label="Instagram">
-                        <LuInstagram class="h-5 w-5 transition-transform duration-200 ease-in-out transform hover:scale-110" />
+                        <LuInstagram class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
                     </Link>
                 </li>
                 <li>
                     <Link href="https://twitter.com/sebacc92" aria-label="Twitter">
-                        <LuTwitter class="h-5 w-5 transition-transform duration-200 ease-in-out transform hover:scale-110" />
+                        <LuTwitter class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
                     </Link>
                 </li>
                 <li>
                     <Link href="https://www.youtube.com/watch?v=0sqIXDJ546w&t" aria-label="YouTube">
-                        <LuYoutube class="h-5 w-5 transition-transform duration-200 ease-in-out transform hover:scale-110" />
+                        <LuYoutube class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
                     </Link>
                 </li>
                 <li>
                     <Link href="https://github.com/sebacc92" aria-label="GitHub">
-                        <LuGithub class="h-5 w-5 transition-transform duration-200 ease-in-out transform hover:scale-110" />
+                        <LuGithub class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
                     </Link>
                 </li>
                 <li>
                     <Link href="https://www.linkedin.com/in/sebastiancardoso92/" aria-label="LinkedIn">
-                        <LuLinkedin class="h-5 w-5 transition-transform duration-200 ease-in-out transform hover:scale-110" />
+                        <LuLinkedin class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
                     </Link>
                 </li>
             </ul>

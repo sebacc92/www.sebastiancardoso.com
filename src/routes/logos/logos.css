@@ -1,0 +1,130 @@
+div.logo-instagram {
+    height: 20rem;
+    width: 20rem;
+    background: radial-gradient(
+        circle at 33% 100%,
+        #fed373 4%,
+        #f15245 30%,
+        #d92e7f 62%,
+        #9b36b7 85%,
+        #515ecf);
+    border-radius: 30%;
+    position: relative;
+}
+
+div.logo-instagram::before {
+    content: '';
+    border: 1rem solid #fff;
+    border-radius: 30%;
+    width: 12.5rem;
+    height: 12.5rem;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+div.logo-instagram::after {
+    content: '';
+    border: 1rem solid #fff;
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+div.logo-instagram span {
+    content: '';
+    border: 1rem solid #fff;
+    border-radius: 100%;
+    width: 0;
+    height: 0;
+    left: 5rem;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    top: 5rem;
+}
+
+div.logo-netflix {
+    background-color: #b1060f;
+    height: 250px;
+    width: 60px;
+    position: relative;
+}
+
+div.logo-netflix::before {
+    background-color: #b1060f;
+    height: 250px;
+    width: 60px;
+    position: absolute;
+    content: '';
+    left: 90px;
+}
+
+div.logo-netflix::after {
+    height: 20px;
+    width: 175px;
+    position: absolute;
+    content: '';
+    left: -15px;
+    bottom: -10px;
+    border-radius: 50%;
+}
+
+div.logo-netflix span {
+    position: absolute;
+    height: 250px;
+    width: 60px;
+    background-color: #e50913;
+    left: 46px;
+    transform: skew(20deg);
+    box-shadow: 0 0 10px +4px #222;
+}
+
+div.logo-tiktok {
+    margin: 100px auto;
+    width: 37px;
+    height: 218px;
+    background: #fff;
+    box-shadow: 11px 10px 0 0 #fe2d52;
+    filter: drop-shadow(-10px -10px 0 #28ffff);
+    position: relative;
+}
+
+div.logo-tiktok::after {
+    content: '';
+    position: absolute;
+    border: 37px solid #fff;
+    border-top-color: transparent;
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    filter: drop-shadow(16px 0 0 #fe2d52);
+    top: 132px;
+    left: -113px;
+
+}
+
+div.logo-tiktok::before {
+    content: '';
+    position: absolute;
+    border-top-color: transparent;
+    width:160px;
+    height: 160px;
+    border: 30px solid transparent;
+    border-bottom-color: #fff;
+    border-radius: 100%;
+    transform: rotate(45deg);
+    filter: drop-shadow(14px 0 0 #fe2d52);
+    top: -95px;
+    left: 0px;
+}

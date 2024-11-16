@@ -6,19 +6,19 @@ import { Image } from '@unpic/qwik';
 export const Hero = component$(() => {
     return (
         <div>
-            <div class="max-w-7xl mx-auto grid md:grid-cols-10 gap-4 items-center">
-                <div class="md:col-span-4 relative aspect-square w-full max-w-sm mx-auto">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-10 gap-4">
+                <div class="md:col-span-4 relative aspect-square w-full max-w-sm mx-auto my-4 md:mt-0">
                     <Image
                         src="/yo.webp"
                         layout="constrained"
                         width={400}
                         height={400}
                         class="rounded-lg object-cover shadow-2xl"
-                        alt="A lovely bath"
+                        alt={_`Foto de perfil de Sebastian Cardoso`}
                     />
                 </div>
-                <div class="md:col-span-6 space-y-6">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+                <div class="md:col-span-6 space-y-6 px-2 md:mt-2">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
                         {_`Hi!`}<div class="inline-block origin-[70%_70%] animate-wave">👋</div>{_`I\'m Sebastian Cardoso`}
                     </h1>
                     <p class="text-2xl md:text-3xl text-gray-700 dark:text-gray-300">
@@ -38,10 +38,10 @@ export const Hero = component$(() => {
                         <div class="space-x-2">
                             {_`Currently writing software with:`}
                             <Badge class="ml-1 bg-violet-400 hover:bg-violet-500">
-                                Qwik
+                                <a href="https://qwik.dev/" target="_blank">Qwik</a>
                             </Badge>
                             <Badge class="ml-1 bg-green-400 hover:bg-green-500">
-                                FastAPI
+                                <a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a>
                             </Badge>
                         </div>
                     </div>

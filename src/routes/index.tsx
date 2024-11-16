@@ -5,8 +5,9 @@ import { Hero } from "~/components/Hero";
 
 export default component$(() => {
   return (
-    <main class="flex flex-col justify-center">
+    <main class="content-center">
       <Hero />
+      {/* <Writing /> */}
     </main>
   );
 });

@@ -1,0 +1,299 @@
+span.phrase0 {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing 6s steps(60), blink .5s infinite alternate;
+    width: 0;
+    overflow: hidden;
+}
+
+span.phrase1 {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing2 6s steps(60), blink .5s infinite alternate;
+    width: 0;
+    overflow: hidden;
+}
+span.phrase2 {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing3 6s steps(60), blink .5s infinite alternate;
+    width: 0;
+    overflow: hidden;
+}
+span.phrase3 {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing4 6s steps(60), blink .5s infinite alternate;
+    width: 0;
+    overflow: hidden;
+}
+span.phrase4 {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing5 6s steps(60), blink .5s infinite alternate;
+    width: 0;
+    overflow: hidden;
+}
+span.phrase5 {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing6 6s steps(60), blink .5s infinite alternate;
+    width: 0;
+    overflow: hidden;
+}
+span.phrase6 {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 59ch;
+    animation: typing7 6s steps(60), blink .5s infinite alternate;
+    width: 0;
+    overflow: hidden;
+}
+span.phrase7 {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing8 6s steps(60), blink .5s infinite alternate;
+    width: 0;
+    overflow: hidden;
+}
+span.phrase8 {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing9 6s steps(60), blink .5s infinite alternate;
+    width: 0;
+    overflow: hidden;
+}
+span.phrase9 {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    border-right: 4px solid;
+    animation: typing10 6s steps(60), blink .5s infinite alternate;
+    width: 0;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 59ch;
+    }
+
+    70% {
+        width: 59ch;
+    }
+
+    100% {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes typing2 {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 58ch;
+    }
+
+    70% {
+        width: 58ch;
+    }
+
+    100% {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes typing3 {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 61ch;
+    }
+
+    70% {
+        width: 61ch;
+    }
+
+    100% {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+
+@keyframes typing4 {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 68ch;
+    }
+
+    70% {
+        width: 68ch;
+    }
+
+    100% {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes typing5 {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 56ch;
+    }
+
+    70% {
+        width: 56ch;
+    }
+
+    100% {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes typing6 {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 57ch;
+    }
+
+    70% {
+        width: 57ch;
+    }
+
+    100% {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes typing7 {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 66ch;
+    }
+
+    70% {
+        width: 66ch;
+    }
+
+    100% {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes typing8 {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 56ch;
+    }
+
+    70% {
+        width: 56ch;
+    }
+
+    100% {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes typing9 {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 60ch;
+    }
+
+    70% {
+        width: 60ch;
+    }
+
+    100% {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes typing10 {
+    0% {
+        width: 0;
+    }
+
+    40% {
+        width: 57ch;
+    }
+
+    70% {
+        width: 57ch;
+    }
+
+    100% {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
