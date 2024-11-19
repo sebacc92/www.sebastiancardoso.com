@@ -1,5 +1,3 @@
-/* eslint-disable qwik/no-use-visible-task */
-
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { _ } from 'compiled-i18n';

@@ -1,4 +1,3 @@
-/* eslint-disable qwik/no-use-visible-task */
 import { component$, createContextId, type Signal, useContextProvider, useSignal, useStylesScoped$, useVisibleTask$ } from "@builder.io/qwik";
 import { LuMoon, LuSun } from "@qwikest/icons/lucide";
 import styles from './ThemeSwitch.css?inline';

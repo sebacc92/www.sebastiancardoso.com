@@ -1,5 +1,3 @@
-/* eslint-disable qwik/no-use-visible-task */
-
 import ImgYo2 from '~/media/yo2.jpg?jsx';
 import { component$, getLocale, useSignal, useStylesScoped$, useVisibleTask$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';

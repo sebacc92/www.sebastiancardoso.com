@@ -1,4 +1,3 @@
-/* eslint-disable qwik/no-use-visible-task */
 import { component$, useSignal, useStylesScoped$, useVisibleTask$ } from "@builder.io/qwik";
 import styles from './writing.css?inline';
 import { _ } from "compiled-i18n";

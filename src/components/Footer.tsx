@@ -29,8 +29,8 @@ export const Footer = component$(() => {
             {/* Bloque 3: Redes Sociales */}
             <ul class="flex justify-center items-center gap-8 lg:gap-10">
                 <li>
-                    <Link href="https://instagram.com/sebacc92/" aria-label="Instagram">
-                        <LuInstagram class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
+                    <Link href="https://github.com/sebacc92" aria-label="GitHub">
+                        <LuGithub class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
                     </Link>
                 </li>
                 <li>
@@ -39,18 +39,18 @@ export const Footer = component$(() => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="https://www.youtube.com/watch?v=0sqIXDJ546w&t" aria-label="YouTube">
-                        <LuYoutube class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
-                    </Link>
-                </li>
-                <li>
-                    <Link href="https://github.com/sebacc92" aria-label="GitHub">
-                        <LuGithub class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
-                    </Link>
-                </li>
-                <li>
                     <Link href="https://www.linkedin.com/in/sebastiancardoso92/" aria-label="LinkedIn">
                         <LuLinkedin class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://instagram.com/sebacc92/" aria-label="Instagram">
+                        <LuInstagram class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://www.youtube.com/watch?v=0sqIXDJ546w&t" aria-label="YouTube">
+                        <LuYoutube class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
                     </Link>
                 </li>
             </ul>

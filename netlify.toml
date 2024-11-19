@@ -1,30 +1,3 @@
-[functions]
-
-  [functions.emails]
-  included_files = [
-    "./emails/**"
-  ]
-
 [build]
 publish = "dist"
 command = "npm run build"
-
-[context]
-
-  [context.dev]
-
-    [context.dev.functions]
-
-      [context.dev.functions.emails]
-      included_files = [
-        "./emails/**"
-      ]
-
-  [context.main]
-
-    [context.main.functions]
-
-      [context.main.functions.emails]
-      included_files = [
-        "./emails/**"
-      ]
