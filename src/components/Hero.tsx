@@ -9,11 +9,11 @@ export const Hero = component$(() => {
             <div class="max-w-7xl mx-auto grid md:grid-cols-10 gap-4">
                 <div class="md:col-span-4 relative aspect-square w-full max-w-sm mx-auto my-4 md:mt-0">
                     <Image
-                        src="/yo.webp"
+                        src="/yo_sin_fondo.png"
                         layout="constrained"
                         width={400}
                         height={400}
-                        class="rounded-lg object-cover shadow-2xl"
+                        class="rounded-lg object-cover"
                         alt={_`Foto de perfil de Sebastian Cardoso`}
                     />
                 </div>
