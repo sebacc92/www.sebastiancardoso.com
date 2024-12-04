@@ -8,7 +8,7 @@ export const ThemeContext = createContextId<Signal<string>>(
 
 export const ThemeSwitch = component$(() => {
     useStylesScoped$(styles);
-    const theme = useSignal<string>((typeof window !== "undefined" && window.localStorage.theme) || undefined);
+    const theme = useSignal<string>();
     useContextProvider(ThemeContext, theme);
 
     useVisibleTask$(() => {
@@ -26,10 +26,12 @@ export const ThemeSwitch = component$(() => {
                     onClick$={() => {
                         if (theme.value === "dark") {
                             document.documentElement.classList.remove("dark");
-                            theme.value = window.localStorage.theme = "light";
+                            theme.value = "light";
+                            localStorage.setItem("theme", "light")
                         } else {
                             document.documentElement.classList.add("dark");
-                            theme.value = window.localStorage.theme = "dark";
+                            theme.value = "dark";
+                            localStorage.setItem("theme", "dark")
                         }
                     }}
                 >
