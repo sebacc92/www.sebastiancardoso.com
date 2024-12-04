@@ -23,6 +23,13 @@ export default component$(() => {
 
     const workProjects = [
         {
+            id: 3,
+            title: 'Ercon SRL',
+            description: 'Sitio web corporativo para empresa de construcción.',
+            demo: 'https://erconsrl.com.ar/',
+            stack: ['React', 'Redux', 'Next SSG']
+        },
+        {
             id: 2,
             title: 'Resto Simple',
             description: 'Gestion de pedidos gastronomicos para restaurantes. 🍔',
@@ -31,18 +38,18 @@ export default component$(() => {
         },
         {
             id: 5,
-            title: 'iglobal.co',
+            title: 'Iglobal',
             description: 'Plataforma desarrollada para comercio internacional.',
             demo: 'https://iglobal.co/',
             stack: ['React', 'Node', 'MongoDB']
-        },
+        }
     ];
 
     return (
         <div class="flex-grow m-[0_auto] max-w-4xl px-6 sm:px-4 ">
             <main class="mt-4">
                 {/* Sección de mis proyectos */}
-                <h2 class="font-semibold text-xl mt-4">{_`Mis Proyectos`}</h2>
+                <h2 class="font-semibold text-xl mt-8 mb-2">{_`Mis Proyectos`}</h2>
                 <div class="grid gap-x-4 gap-y-6 sm:grid-cols-2 md:grid-cols-3">
                     {myProjects.map(project => (
                         <Project
@@ -56,7 +63,7 @@ export default component$(() => {
                 </div>
 
                 {/* Sección de experiencia laboral */}
-                <h2 class="font-semibold text-xl mt-8">{_`Experiencia Laboral`}</h2>
+                <h2 class="font-semibold text-xl mt-8 mb-2">{_`Experiencia Laboral`}</h2>
                 <div class="grid gap-x-4 gap-y-6 sm:grid-cols-2 md:grid-cols-3">
                     {workProjects.map(project => (
                         <Project

@@ -1,5 +1,4 @@
 import { component$ } from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
 import { LuGithub, LuInstagram, LuLinkedin, LuTwitter, LuYoutube } from '@qwikest/icons/lucide';
 import { _ } from 'compiled-i18n';
 import { useServerTimeLoader } from '~/routes/layout';
@@ -29,29 +28,29 @@ export const Footer = component$(() => {
             {/* Bloque 3: Redes Sociales */}
             <ul class="flex justify-center items-center gap-8 lg:gap-10">
                 <li>
-                    <Link href="https://github.com/sebacc92" aria-label="GitHub">
+                    <a href="https://github.com/sebacc92" aria-label="GitHub" target="_blank" >
                         <LuGithub class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href="https://twitter.com/sebacc92" aria-label="Twitter">
+                    <a href="https://twitter.com/sebacc92" aria-label="Twitter" target="_blank">
                         <LuTwitter class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href="https://www.linkedin.com/in/sebastiancardoso92/" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/sebastiancardoso92/" aria-label="LinkedIn" target="_blank">
                         <LuLinkedin class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href="https://instagram.com/sebacc92/" aria-label="Instagram">
+                    <a href="https://instagram.com/sebacc92/" aria-label="Instagram" target="_blank">
                         <LuInstagram class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link href="https://www.youtube.com/watch?v=0sqIXDJ546w&t" aria-label="YouTube">
+                    <a href="https://www.youtube.com/watch?v=0sqIXDJ546w&t" aria-label="YouTube" target="_blank">
                         <LuYoutube class="h-5 w-5 transition-transform duration-300 ease-in-out transform hover:scale-125" />
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </footer>

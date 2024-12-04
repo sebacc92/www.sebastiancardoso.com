@@ -69,13 +69,11 @@ export default component$(() => {
                         }
                     </div>
                     <br />
-                    <p>{_`Soy un apasionado desarrollador Full-stack JavaScript con más de 5 años de experiencia en la creación de aplicaciones web eficientes y sistemas robustos. Mi viaje en el mundo de la tecnología comenzó desde joven, siempre curioso por las computadoras y cómo funcionan.`}</p>
+                    <p>{_`Soy un desarrollador Full-stack JavaScript con más de 5 años de experiencia en la creación de aplicaciones web modernas, eficientes y escalables. Mi pasión por la tecnología nació desde joven, siempre fascinado por resolver problemas y entender cómo funcionan los sistemas.`}</p>
                     <br />
-                    <p>{_`Aunque comencé mi formación universitaria en sistemas, gran parte de mi conocimiento lo he adquirido de forma autodidacta, lo que me ha permitido adaptarme rápidamente a nuevas tecnologías y frameworks como Qwik, React y Vue.`}</p>
+                    <p>{_`Aunque inicié mis estudios en sistemas, gran parte de mi aprendizaje ha sido autodidacta, lo que me ha permitido adaptarme rápidamente a nuevas herramientas y frameworks como Qwik, React y Vue, aprovechando cada oportunidad para seguir evolucionando como profesional.`}</p>
                     <br />
-                    <p>{_`Fuera del desarrollo web, disfruto de actividades al aire libre como andar en bicicleta, nadar y levantar peso en el gimnasio. Además, me encanta leer libros de autores inspiradores como Napoleon Hill, Steven Covey, Kiyosaki, Harv Eker y Eckhart Tolle, que me motivan a crecer tanto personal como profesionalmente.`}</p>
-                    <br />
-                    <p>{_`Creo firmemente que vivimos en una era única donde la conectividad global nos permite unirnos y colaborar como nunca antes. Mi misión es aprovechar esta conectividad para crear sistemas que fomenten la unidad y el progreso, incrementando la vibración positiva de nuestro planeta`}.</p>
+                    <p>{_`Más allá del desarrollo, disfruto de actividades al aire libre como el ciclismo, la natación y el entrenamiento físico, que me ayudan a mantener un equilibrio entre la vida personal y profesional. Me motiva constantemente la búsqueda de nuevas ideas y retos que contribuyan a mi crecimiento integral.`}</p>
                 </div>
             </div>
             <h2 class="text-2xl mt-8 ml-2">🕐 {_`Timeline de mi vida`}</h2>

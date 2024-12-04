@@ -5,6 +5,7 @@ import {
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
+import { DarkThemeLauncher } from "~/components/common/DarkThemeLauncher";
 import { isDev } from "@builder.io/qwik/build";
 
 import "./global.css";
@@ -28,27 +29,7 @@ export default component$(() => {
           />
         )}
         <RouterHead />
-        <script
-          dangerouslySetInnerHTML={`
-            (function() {
-              function setTheme(theme) {
-                document.documentElement.className = theme;
-                localStorage.setItem('theme', theme);
-              }
-              var theme = localStorage.getItem('theme');
-              if (theme) {
-                setTheme(theme);
-              } else {
-                setTheme('light');
-              }
-            })();
-            window.addEventListener('load', function() {
-              var themeSwitch = document.getElementById('hide-checkbox');
-              themeSwitch?.checked = localStorage.getItem('theme') === 'light'? true: false;
-            }
-            );
-        `}
-        ></script>
+        <DarkThemeLauncher />
       </head>
       <body>
         <RouterOutlet />

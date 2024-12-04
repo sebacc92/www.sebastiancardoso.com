@@ -8,33 +8,33 @@ export const ThemeContext = createContextId<Signal<string>>(
 
 export const ThemeSwitch = component$(() => {
     useStylesScoped$(styles);
-    const theme = useSignal('light');
+    const theme = useSignal<string>((typeof window !== "undefined" && window.localStorage.theme) || undefined);
     useContextProvider(ThemeContext, theme);
 
     useVisibleTask$(() => {
-        theme.value = localStorage.getItem('theme') || 'light';
+        theme.value = document.documentElement.classList.contains("dark")
+            ? "dark"
+            : "light";
     });
 
     return (
         <div class="switch">
             <label>
-                <input
-                    type="checkbox"
+                <button
+                    type="button"
+                    class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                     onClick$={() => {
-                        if (theme.value === "light") {
-                            document.documentElement.className = "dark";
-                            localStorage.setItem("theme", "dark");
-                            theme.value = "dark";
+                        if (theme.value === "dark") {
+                            document.documentElement.classList.remove("dark");
+                            theme.value = window.localStorage.theme = "light";
                         } else {
-                            document.documentElement.className = "light";
-                            localStorage.setItem("theme", "light");
-                            theme.value = "light";
+                            document.documentElement.classList.add("dark");
+                            theme.value = window.localStorage.theme = "dark";
                         }
                     }}
-                />
-                <span class="py-4 px-2">
+                >
                     <span class="theme-icon bg-blue-400a">{theme.value === "light" ? <LuSun /> : <LuMoon />}</span>
-                </span>
+                </button>
             </label>
         </div>
     );
