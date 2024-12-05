@@ -2,12 +2,13 @@ import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { _ } from "compiled-i18n";
 import { Hero } from "~/components/Hero";
+import Projects from "~/components/Projects";
 
 export default component$(() => {
   return (
     <main class="content-center">
       <Hero />
-      {/* <Writing /> */}
+      <Projects />
     </main>
   );
 });

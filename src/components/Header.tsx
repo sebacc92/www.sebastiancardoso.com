@@ -38,11 +38,6 @@ export const Header = component$(() => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink class="hidden lg:block py-4 px-3 hover:bg-slate-200 dark:hover:bg-zinc-700 transition-colors duration-300 ease-in-out" href="/photos/" activeClass="font-bold border-b-2 border-b-black dark:border-b-white">
-                                <div>{_`Photos`}</div>
-                            </NavLink>
-                        </li>
-                        <li>
                             <NavLink class="hidden lg:block py-4 px-3 hover:bg-slate-200 dark:hover:bg-zinc-700 transition-colors duration-300 ease-in-out" href="/projects/" activeClass="font-bold border-b-2 border-b-black dark:border-b-white">
                                 <div>{_`Projects`}</div>
                             </NavLink>
@@ -89,15 +84,6 @@ export const Header = component$(() => {
                                 activeClass="font-bold"
                             >
                                 <div class="text-center">{_`Blog`}</div>
-                            </NavLink>
-                        </li>
-                        <li class="flex justify-center">
-                            <NavLink
-                                class="py-4 hover:bg-slate-200 dark:hover:bg-zinc-700 transition-colors duration-300 ease-in-out w-full"
-                                href="/photos/"
-                                activeClass="font-bold"
-                            >
-                                <div class="text-center">{_`Photos`}</div>
                             </NavLink>
                         </li>
                         <li class="flex justify-center">

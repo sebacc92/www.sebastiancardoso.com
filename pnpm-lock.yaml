@@ -23,9 +23,6 @@ importers:
       '@qwik-ui/styled':
         specifier: 0.2.0
         version: 0.2.0(@builder.io/qwik@1.10.0(vite@5.4.11(@types/node@22.9.1)))
-      '@qwik-ui/themes':
-        specifier: 0.1.0
-        version: 0.1.0(@builder.io/qwik@1.10.0(vite@5.4.11(@types/node@22.9.1)))
       '@qwik-ui/utils':
         specifier: 0.3.1
         version: 0.3.1
@@ -62,6 +59,15 @@ importers:
       eslint-plugin-qwik:
         specifier: 1.10.0
         version: 1.10.0(eslint@9.15.0(jiti@1.21.6))(typescript@5.7.2)
+      flowbite:
+        specifier: ^2.5.2
+        version: 2.5.2(rollup@4.28.0)
+      flowbite-qwik:
+        specifier: ^0.37.10
+        version: 0.37.10(rollup@4.28.0)
+      flowbite-qwik-icons:
+        specifier: ^0.1.8
+        version: 0.1.8
       netlify-cli:
         specifier: ^15.0.0
         version: 15.11.0(@types/node@22.9.1)(picomatch@4.0.2)(rollup@4.28.0)
@@ -1388,6 +1394,9 @@ packages:
     resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
     engines: {node: '>=12'}
 
+  '@popperjs/core@2.11.8':
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+
   '@protobufjs/aspromise@1.1.2':
     resolution: {integrity: sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ==}
 
@@ -1430,12 +1439,6 @@ packages:
     peerDependencies:
       '@builder.io/qwik': ^1.9
 
-  '@qwik-ui/themes@0.1.0':
-    resolution: {integrity: sha512-DSRAUOqDIjzIcNJM3sQ1LtiViGyYS7jD1iLRMd9lYjs2h4CqPgAq9xA2GA0RobhwtN+4mMz3paRyNdSloIejcw==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      '@builder.io/qwik': 1.7.2
-
   '@qwik-ui/utils@0.3.1':
     resolution: {integrity: sha512-lBmFDr7igPvSN8MVgPdvXzk9SLhEynCbXpczJNC2VJsVPUS51/e2+42ha03yEwihO4b3ePaBa+CzuZpsz1VvQQ==}
 
@@ -1444,6 +1447,15 @@ packages:
     engines: {node: '>=15.0.0'}
     peerDependencies:
       '@builder.io/qwik': '>=1.0.0'
+
+  '@rollup/plugin-node-resolve@15.3.0':
+    resolution: {integrity: sha512-9eO5McEICxMzJpDW9OnMYSv4Sta3hmt7VtBFz5zR9273suNOydOyq/FrGeGy+KsTRFm8w0SLVhzig2ILFT63Ag==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^2.78.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
 
   '@rollup/pluginutils@4.2.1':
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
@@ -1651,6 +1663,9 @@ packages:
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
+
+  '@types/resolve@1.20.2':
+    resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
 
   '@types/retry@0.12.1':
     resolution: {integrity: sha512-xoDlM2S4ortawSWORYqsdU+2rxdh4LRW9ytc3zmT37RIKQh6IHyKwwtKhKis9ah8ol07DCkZxPt8BBvPjC6v4g==}
@@ -3328,6 +3343,20 @@ packages:
   flatted@3.3.2:
     resolution: {integrity: sha512-AiwGJM8YcNOaobumgtng+6NHuOqC3A7MixFeDafM3X9cIUM+xUXoS5Vfgf+OihAYe20fxqNM9yPBXJzRtZ/4eA==}
 
+  flowbite-datepicker@1.3.0:
+    resolution: {integrity: sha512-CLVqzuoE2vkUvWYK/lJ6GzT0be5dlTbH3uuhVwyB67+PjqJWABm2wv68xhBf5BqjpBxvTSQ3mrmLHpPJ2tvrSQ==}
+
+  flowbite-qwik-icons@0.1.8:
+    resolution: {integrity: sha512-+6OjRbI7cxmnHUzEaq9G5G5+bfdUDnIR7cTz/YtNJvSb3XxsMNZI9rMHTQnlC1D4f8Thl+0afmi1BnMZmyhOxQ==}
+    engines: {node: '>=20.0.0'}
+
+  flowbite-qwik@0.37.10:
+    resolution: {integrity: sha512-608fHZ0tJnP8J0aK4l8MBCnniz09f+d4dqdGXVH2r6ZpdnG8/hzR9DwVov8n+bm5RZDH73HIB/QD5b46EtA2Rg==}
+    engines: {node: '>=20.0.0'}
+
+  flowbite@2.5.2:
+    resolution: {integrity: sha512-kwFD3n8/YW4EG8GlY3Od9IoKND97kitO+/ejISHSqpn3vw2i5K/+ZI8Jm2V+KC4fGdnfi0XZ+TzYqQb4Q1LshA==}
+
   flush-write-stream@2.0.0:
     resolution: {integrity: sha512-uXClqPxT4xW0lcdSBheb2ObVU+kuqUk3Jk64EwieirEXZx9XUrVwp/JuBfKAWaM4T5Td/VL7QLDWPXp/MvGm/g==}
 
@@ -3911,6 +3940,9 @@ packages:
   is-map@2.0.3:
     resolution: {integrity: sha512-1Qed0/Hr2m+YqxnM09CjA2d/i6YZNfF6R2oRAOj36eUdS6qIV/huPJNSEpKbupewFs+ZsJlxsjjPbc0/afW6Lw==}
     engines: {node: '>= 0.4'}
+
+  is-module@1.0.0:
+    resolution: {integrity: sha512-51ypPSPCoTEIN9dy5Oy+h4pShgJmPCygKfyRCISBI+JoWT/2oJvK8QPxmwv7b/p239jXrm9M1mlQbyKJ5A152g==}
 
   is-negative-zero@2.0.3:
     resolution: {integrity: sha512-5KoIu2Ngpyek75jXodFvnafB6DJgr3u8uuK0LEZJjrU19DrMD3EVERaR8sjz8CCGgpZvxPl9SuE1GMVPFHx1mw==}
@@ -4592,6 +4624,10 @@ packages:
   mimic-response@4.0.0:
     resolution: {integrity: sha512-e5ISH9xMYU0DzrT+jl8q2ze9D6eWBto+I8CNpe+VI+K2J/F/k3PdkdTdz4wvGVH4NTpo+NRYTVIuMQEMMcsLqg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
 
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
@@ -7971,6 +8007,8 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
+  '@popperjs/core@2.11.8': {}
+
   '@protobufjs/aspromise@1.1.2': {}
 
   '@protobufjs/base64@1.1.2': {}
@@ -8007,10 +8045,6 @@ snapshots:
     dependencies:
       '@builder.io/qwik': 1.10.0(vite@5.4.11(@types/node@22.9.1))
 
-  '@qwik-ui/themes@0.1.0(@builder.io/qwik@1.10.0(vite@5.4.11(@types/node@22.9.1)))':
-    dependencies:
-      '@builder.io/qwik': 1.10.0(vite@5.4.11(@types/node@22.9.1))
-
   '@qwik-ui/utils@0.3.1':
     dependencies:
       clsx: 2.1.1
@@ -8021,6 +8055,16 @@ snapshots:
   '@qwikest/icons@0.0.13(@builder.io/qwik@1.10.0(vite@5.4.11(@types/node@22.9.1)))':
     dependencies:
       '@builder.io/qwik': 1.10.0(vite@5.4.11(@types/node@22.9.1))
+
+  '@rollup/plugin-node-resolve@15.3.0(rollup@4.28.0)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.3(rollup@4.28.0)
+      '@types/resolve': 1.20.2
+      deepmerge: 4.3.1
+      is-module: 1.0.0
+      resolve: 1.22.8
+    optionalDependencies:
+      rollup: 4.28.0
 
   '@rollup/pluginutils@4.2.1':
     dependencies:
@@ -8184,6 +8228,8 @@ snapshots:
       undici-types: 6.19.8
 
   '@types/normalize-package-data@2.4.4': {}
+
+  '@types/resolve@1.20.2': {}
 
   '@types/retry@0.12.1': {}
 
@@ -10202,6 +10248,30 @@ snapshots:
 
   flatted@3.3.2: {}
 
+  flowbite-datepicker@1.3.0(rollup@4.28.0):
+    dependencies:
+      '@rollup/plugin-node-resolve': 15.3.0(rollup@4.28.0)
+      flowbite: 2.5.2(rollup@4.28.0)
+    transitivePeerDependencies:
+      - rollup
+
+  flowbite-qwik-icons@0.1.8: {}
+
+  flowbite-qwik@0.37.10(rollup@4.28.0):
+    dependencies:
+      flowbite: 2.5.2(rollup@4.28.0)
+      flowbite-qwik-icons: 0.1.8
+    transitivePeerDependencies:
+      - rollup
+
+  flowbite@2.5.2(rollup@4.28.0):
+    dependencies:
+      '@popperjs/core': 2.11.8
+      flowbite-datepicker: 1.3.0(rollup@4.28.0)
+      mini-svg-data-uri: 1.4.4
+    transitivePeerDependencies:
+      - rollup
+
   flush-write-stream@2.0.0:
     dependencies:
       inherits: 2.0.4
@@ -10823,6 +10893,8 @@ snapshots:
   is-interactive@2.0.0: {}
 
   is-map@2.0.3: {}
+
+  is-module@1.0.0: {}
 
   is-negative-zero@2.0.3: {}
 
@@ -11649,6 +11721,8 @@ snapshots:
   mimic-response@3.1.0: {}
 
   mimic-response@4.0.0: {}
+
+  mini-svg-data-uri@1.4.4: {}
 
   minimatch@3.1.2:
     dependencies:
